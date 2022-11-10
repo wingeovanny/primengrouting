@@ -1,0 +1,24 @@
+<div class="grid">
+    <div class="div1">
+        <h1>Negocios Afiliados</h1>
+        <p-button label="Nuevo Negocio" (onClick)="handleClick($event)"></p-button>
+
+    </div>
+    <div class="div2">
+        <ng-container *ngIf="products.length >0; else notMerchants">
+            <app-dashboard *ngFor="let prod of products ;" [empl]="prod"></app-dashboard>
+        </ng-container>
+    </div>
+</div>
+
+
+<ng-template #notMerchants>
+    <div class="container-center">
+        <div style="text-align: center;">
+            <p-image src="assets/svg/checklist.svg" alt="Image" width="250"></p-image>
+            <h1>Ups, parece que no hay negocios por gestionar</h1>
+            <span> Sé la primera persona en crear uno, selecciona “Nuevo negocio”</span>
+        </div>
+    </div>
+
+</ng-template>

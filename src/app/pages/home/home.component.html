@@ -1,0 +1,42 @@
+<div style="padding-left: 3rem;">
+    <h1>Empresas Afiliadasa</h1>
+
+</div>
+
+<div class="grid">
+    <div class="col-6 col-offset-3 ">
+        <div class="text-style my-5">Regresar</div>
+        <app-load-step [stepLoad]="30"></app-load-step>
+    </div>
+    <div class="col-6 col-offset-3">
+        <app-card [header]="'Información general'">
+            <div class="field">
+                <label for="ra-social" class="block">Razón Social</label>
+                <input id="ra-social" styleClass="p-inputtext" type="text" aria-describedby="ra-social-help" pInputText
+                    placeholder="Ej: Dulcafe" />
+            </div>
+            <div class="field pt-4">
+                <label for="re-legal" class="block">Representante Legal</label>
+                <input id="re-legal" styleClass="p-inputtext" type="text" aria-describedby="re-legal-help" pInputText
+                    placeholder="Ej: Juan Sanchez" />
+            </div>
+        </app-card>
+    </div>
+    <div class="col-6 col-offset-3 pt-4">
+        <app-card [header]="'Información visible al cliente'" [subHeader]="'hola'">
+            <div class="grid">
+                <div class="col-6 pr-4">
+                    <div class="field">
+                        <label for="ra-social" class="block">Nombre Comercial</label>
+                        <input id="ra-social" styleClass="p-inputtext" type="text" aria-describedby="ra-social-help"
+                            pInputText placeholder="Ej: Dulcafe" />
+                    </div>
+                </div>
+                <div class="col-6 text-center">
+                    <img loading="lazy" [src]="nombreComercialImg" alt="image">
+                </div>
+            </div>
+
+        </app-card>
+    </div>
+</div>

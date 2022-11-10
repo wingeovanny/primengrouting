@@ -1,0 +1,9 @@
+<div class="header">{{header}}</div>
+<div class="sub-header" *ngIf="subHeader !== ''">{{subHeader}}</div>
+<p-card styleClass="shadow-4 mt-2 p-5" [style]="{'border-radius': '0px'}">
+    <ng-template pTemplate="content" styleClass="p-card-content">
+
+        <ng-content></ng-content>
+
+    </ng-template>
+</p-card>
